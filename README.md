@@ -32,15 +32,21 @@ Push the configuration into your application and edit as required (under app/con
     php artisan config:publish darren-nolan/styler
     
 `base_route` defines the listening base URL. By default `<your-app>/styler/*.(css|less|scss)` is where your look for compiled styles.
+
 `compiler` defines the compiler/driver to use to compile stylesheets with. By default `auto` will check against the file's extension and compile accordingly.
 
 Compiler options
+
 `serve_from` defines where this compiler should look for it's source files. By default `app_path() . '/css'` is used.
+
 `cache_folder` defines where this compiler should store it's cached versions (if any). This folder should be created before use.  Can be set to `false` to disable.
 
 Special Compiler Options
+
 `less` has `format_option` which is what the output should be compiled as. `'lessjs'`, `'compressed'`, `'classic'` and `null` are valid. Check [documentation](http://leafo.net/lessphp/docs/#output_formatting)
+
 `scss` has `format_option` which is what the output should be compiled as. `'scss_formatter'`, `'scss_formatter_nested'`, and `'scss_formatter_compressed'` are valid. Check [documentation](http://leafo.net/scssphp/docs/#output_formatting)
+
 The configuration file is fairly self explanatory. However hang on for some better documentation.
 
 ### Coming at some point
