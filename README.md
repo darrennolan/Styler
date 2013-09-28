@@ -11,7 +11,7 @@ I wrote this particular package because I wanted something stupidly simple, and 
 To grab via composer, just add `darren-nolan/styler` on `dev-master` to your required packages.
 
     "require": {
-        "darren-nolan/styler": "dev-master"
+        "darren-nolan/styler": "0.0.1"
     }
 
 ### Features
@@ -30,8 +30,8 @@ Firstly add the ServiceProvider to your `app.php` configuration
 Push the configuration into your application and edit as required (under app/config/packages/darren-nolan/styler/config.php)
 
     php artisan config:publish darren-nolan/styler
-    
-`base_route` defines the listening base URL. By default `<your-app>/styler/*.(css|less|scss)` is where your look for compiled styles.
+
+`base_route` defines the listening base URL. By default `<your-app>/styler/*.(css|less|scss)` is where you link for compiled styles.
 
 `compiler` defines the compiler/driver to use to compile stylesheets with. By default `auto` will check against the file's extension and compile accordingly.
 

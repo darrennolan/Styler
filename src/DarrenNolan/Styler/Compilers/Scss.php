@@ -12,7 +12,7 @@ class Scss extends FilesystemCompiler implements iCompiler
         $cache_at      = isset($this->config['cache_folder']) ? $this->config['cache_folder'] : false;
         $format_option = isset($this->config['format_option']) ? $this->config['format_option'] : 'scss_formatter_compressed';
 
-        $scss = new scssc(); // Not namespaced. Curse you.
+        $scss = new scssc();
         $scss->setFormatter($format_option);
 
         $_GET['p'] = $this->sanitiseFilePath($file_path);

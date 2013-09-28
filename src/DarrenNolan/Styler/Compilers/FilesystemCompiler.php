@@ -1,6 +1,6 @@
 <?php namespace DarrenNolan\Styler\Compilers;
 
-use Illuminate\Support\Facades\Response;
+use Illuminate\Http\Response;
 
 abstract class FilesystemCompiler
 {
@@ -18,7 +18,7 @@ abstract class FilesystemCompiler
 
     protected function serveCss($contents, Array $additional_headers = null)
     {
-        $response = Response::make($contents, 200);
+        $response = new Response($contents, 200);
         $response->headers->set('Content-Type', 'text/css');
 
         if (is_array($additional_headers)) {
@@ -38,7 +38,7 @@ abstract class FilesystemCompiler
     {
         $contents = '/* Styler Source File Not Found */';
 
-        $response = Response::make($contents, 404);
+        $response = new Response($contents, 404);
         $response->headers->set('Content-Type', 'text/css');
 
         return $response;

@@ -1,7 +1,7 @@
 <?php namespace DarrenNolan\Styler\Compilers;
 
 use lessc;
-use Illuminate\Support\Facades\Response;
+use Illuminate\Http\Response;
 
 class Less extends FilesystemCompiler implements iCompiler
 {
@@ -55,7 +55,7 @@ class Less extends FilesystemCompiler implements iCompiler
         $contents = '/* Styler Less Internal Server Error */' . "\n";
         $contents .= '/*' . $message . '*/';
 
-        $response = Response::make($contents, 500);
+        $response = new Response($contents, 500);
         $response->headers->set('Content-Type', 'text/css');
 
         return $response;
