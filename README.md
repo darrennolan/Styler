@@ -11,7 +11,7 @@ I wrote this particular package because I wanted something stupidly simple, and 
 To grab via composer, just add `darren-nolan/styler` on `dev-master` to your required packages.
 
     "require": {
-        "darren-nolan/styler": "0.0.1"
+        "darren-nolan/styler": "0.0.2"
     }
 
 ### Features
